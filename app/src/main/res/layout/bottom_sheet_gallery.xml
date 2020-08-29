@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="16dp"
+    android:paddingBottom="32dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    <TextView
+        android:id="@+id/txt_gallery_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <ImageView
+        android:id="@+id/image_close_dialog_gallery"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_x"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_edit_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_gallery_tittle"
+        tools:listitem="@layout/item_add_gallery"/>
+
+    <TextView
+        android:id="@+id/txt_remove_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_edit_gallery"
+        android:text="Remove"
+        android:drawableLeft="@drawable/drawable_remove"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btn_edit_upload_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_remove_gallery"
+        android:background="@drawable/button_gray_background"
+        android:text="Upload Images"
+        android:textAllCaps="false"
+        android:layout_marginTop="32dp"
+        android:drawableLeft="@drawable/ic_plus"
+        android:padding="16dp"/>
+    <Button
+        android:id="@+id/btn_save_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_edit_upload_gallery"
+        android:background="@drawable/button_visible_background"
+        android:textAllCaps="false"
+        android:text="Save Gallery"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

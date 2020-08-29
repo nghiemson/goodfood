@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<EditTextPreference
+    app:iconSpaceReserved="false"
+    android:title="@string/pref_full_name_summary"
+    android:defaultValue="@string/pref_full_name_default"
+    android:key="@string/pref_full_name_key"
+    app:useSimpleSummaryProvider="true"
+    />
+    <EditTextPreference
+        app:iconSpaceReserved="false"
+        android:title="@string/pref_bio_summary"
+        android:defaultValue="@string/pref_bio_default"
+        android:key="@string/pref_bio_key"
+        app:useSimpleSummaryProvider="true"
+        />
+    <Preference
+        android:title="Private Informmation"
+        app:iconSpaceReserved="false"/>
+    <EditTextPreference
+        app:iconSpaceReserved="false"
+        android:title="@string/pref_email_summary"
+        android:defaultValue="@string/pref_email_default"
+        android:key="@string/pref_email_key"
+        app:useSimpleSummaryProvider="true"
+        />
+    <EditTextPreference
+        app:iconSpaceReserved="false"
+        android:title="@string/pref_phone_summary"
+        android:defaultValue="@string/pref_phone_default"
+        android:key="@string/pref_phone_key"
+        app:useSimpleSummaryProvider = "true"
+        />
+
+</PreferenceScreen>

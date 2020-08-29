@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="noti_1_default">true</bool>
+    <bool name="noti_2_default">true</bool>
+    <bool name="noti_3_default">true</bool>
+    <bool name="privacy_1_default">true</bool>
+    <bool name="privacy_2_default">true</bool>
+
+</resources>

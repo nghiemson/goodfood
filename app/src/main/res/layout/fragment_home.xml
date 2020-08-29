@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="24dp">
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_height="32dp"
+        android:layout_width="102dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_logo"/>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/button_light_background"
+        android:text="+"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_notification"
+        android:layout_marginRight="30dp"/>
+    <ImageView
+        android:id="@+id/image_notification"
+        android:layout_height="32dp"
+        android:layout_width="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_messages"
+        android:src="@drawable/ic_notification"
+        android:layout_marginRight="30dp" />
+    <ImageView
+        android:id="@+id/image_messages"
+        android:layout_height="32dp"
+        android:layout_width="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_messages"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_feed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_feed"
+        android:layout_marginTop="48dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

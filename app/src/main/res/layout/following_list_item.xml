@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="8dp">
+    <RelativeLayout
+        android:id="@+id/layout_follow_item"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/other_avatar"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/following_avatar"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/following_avatar"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="16dp"
+            android:id="@+id/following_name"
+            android:text="Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_bio_default"
+            android:layout_below="@id/following_name"
+            android:layout_toRightOf="@id/following_avatar"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:id="@+id/following_address"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 follower"
+            android:layout_below="@id/following_address"
+            android:layout_toEndOf="@id/following_avatar"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/following_count"
+            android:layout_marginBottom="16dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

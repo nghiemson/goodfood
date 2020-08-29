@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Search Filter"
+    android:fontFamily="sans-serif-black"
+    android:textSize="16sp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredients"
+        android:layout_marginStart="40dp"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/ingredientSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:theme="@style/AppTheme"
+        android:valueFrom="0"
+        android:valueTo="20"
+        android:stepSize="1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Serving Time (minutes)" />
+        <com.google.android.material.slider.RangeSlider
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:valueFrom="0"
+            android:valueTo="60"
+            android:stepSize="1"
+            app:values="@array/initial_slider_values"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:theme="@style/AppTheme"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search For"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="40dp"/>
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:theme="@style/AppTheme"
+        android:layout_marginStart="32dp"
+        >
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:text="recipe"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:text="profile"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:text="tag"/>
+    </com.google.android.material.chip.ChipGroup>
+<com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Apply Filter"
+    android:layout_gravity="center"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="16dp"
+    android:theme="@style/AppTheme"/>
+
+
+</LinearLayout>

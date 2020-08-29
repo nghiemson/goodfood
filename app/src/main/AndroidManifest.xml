@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.goodfood">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <dist:module dist:instant="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_recipe"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBar">
+        <activity android:name="com.example.goodfood.RecipeSqlActivity"></activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.goodfood.LoginActivity" />
+        <activity
+            android:name="com.example.goodfood.OtherProfileActivity"
+            android:parentActivityName="com.example.goodfood.OtherProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.goodfood.SettingsActivity"
+            android:label="@string/action_settings"
+            android:parentActivityName="com.example.goodfood.SettingsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT.ACTIVITY"
+                android:value=".SettingsActivity" />
+        </activity>
+        <activity android:name="com.example.goodfood.CreateRecipeActivity" />
+        <activity
+            android:name="com.example.goodfood.ViewRecipeActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.example.goodfood.EditProfileActivity"
+            android:label="@string/action_edit_profile"
+            android:parentActivityName="com.example.goodfood.EditProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.goodfood.MainActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.example.goodfood.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

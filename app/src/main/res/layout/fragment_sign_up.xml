@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/NoActionBar"
+    android:orientation="vertical"
+    android:id="@+id/wrap_login"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:scaleType="centerCrop"
+                android:cropToPadding="false"
+                android:src="@drawable/background_login"
+                android:alpha="0.7"
+                />
+
+            <ImageView
+                android:src="@drawable/border_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_logo"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="100dp"
+            android:textColor="#000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from Scratch"
+            android:textSize="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="130dp"
+            android:textColor="#000"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create account to continue."
+            android:textColor="#606060"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:layout_marginTop="30dp"
+            android:textSize="16dp"
+            />
+        <EditText
+            android:id="@+id/txtFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:hint="Enter full name "
+            android:inputType="textEmailAddress"
+            android:textSize="14dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            />
+        <EditText
+            android:id="@+id/txtEmailSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress"
+            android:textSize="14dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            />
+        <EditText
+            android:id="@+id/txtPassSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:hint="Enter password"
+            android:inputType="textPassword"
+            android:textSize="14dp"
+            />
+        <Button
+            android:id="@+id/btn_signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:background="@drawable/button_visible_background"
+            android:layout_marginVertical="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Already have an account?"
+            android:layout_marginTop="50dp"
+            />
+        <TextView
+            android:id="@+id/idSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Login Here"
+            android:textSize="16dp"
+            android:textColor="#30BE76"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
