@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="32dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="32dp">
+    <TextView
+        android:id="@+id/txt_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lọc theo chủ đề"/>
+    <LinearLayout
+        android:id="@+id/layout_filter"
+        android:layout_width="match_parent"
+        android:layout_below="@id/txt_filter"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_info">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_do_man_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Đồ mặn"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_do_ngot_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Đồ Ngọt"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_do_chay_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Đồ Chay"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_sup_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Súp"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_canh_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Canh"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_an_vat_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Đồ ăn vặt"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_do_uong_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:textSize="16sp"
+                android:checkable="true"
+                android:text="Đồ uống"/>
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_filter_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_filter"
+        android:text="Lọc theo người theo dõi"/>
+    <LinearLayout
+        android:id="@+id/layout_filter_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_filter_follow"
+        android:orientation="horizontal">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_follow"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedChip="@id/chip_all_filter_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all_filter_follow"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tất cả"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_following_filter"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Người đang theo dõi"/>
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_order_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_filter_follow"
+        android:text="Sắp xếp"/>
+    <LinearLayout
+        android:id="@+id/layout_order_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_order_by"
+        android:orientation="horizontal">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_orderby"
+            android:layout_width="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedChip="@+id/chip_default_orderby"
+            android:layout_height="wrap_content">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_default_orderby"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mặc định"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_like_count_orderby"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Lượt thích"/>
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_save_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/layout_order_by"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_visible_background"/>
+
+</RelativeLayout>

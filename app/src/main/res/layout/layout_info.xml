@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--Add Info-->
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+        <LinearLayout
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Info"
+                    android:layout_marginBottom="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipgroup_create_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_info">
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_do_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Đồ mặn"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_do_ngot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Đồ Ngọt"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_do_chay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Đồ Chay"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_sup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Súp"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_canh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Canh"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_an_vat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Đồ ăn vặt"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_do_uong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:textSize="16sp"
+                        android:checkable="true"
+                        android:text="Đồ uống"/>
+                </com.google.android.material.chip.ChipGroup>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

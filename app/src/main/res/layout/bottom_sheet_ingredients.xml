@@ -30,7 +30,7 @@
         android:layout_height="100dp"
         app:layout_constraintHeight_max="200dp"
         app:layout_constraintBottom_toTopOf="@id/et_ingredient"
-        tools:listitem="@layout/item_ingredient"
+        tools:listitem="@layout/item_list_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_ingredients_tittle"
         android:layout_marginTop="32dp"/>

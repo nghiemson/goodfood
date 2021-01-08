@@ -45,7 +45,6 @@
         android:title="Change Password"
         app:iconSpaceReserved="false"
         android:selectable="true"
-        >
+        android:key="changePass" />
 
-    </Preference>
 </PreferenceScreen>

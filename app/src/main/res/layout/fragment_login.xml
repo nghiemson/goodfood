@@ -87,26 +87,15 @@
             android:inputType="textEmailAddress"
             />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password"
                 android:textSize="16dp"
                 />
-            <TextView
-                android:id="@+id/idForgotPass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Forgot password?"
-                android:gravity="right"
-                android:textColor="#606060"
-                />
-        </LinearLayout>
+
+
         <EditText
             android:id="@+id/txtPass"
             android:layout_width="match_parent"
@@ -116,6 +105,32 @@
             android:textSize="14dp"
             android:inputType="textPassword"
             />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:id="@+id/saveCredentials"
+            android:layout_below="@+id/txtPass"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:checked="false" />
+        <TextView
+            android:id="@+id/tvForgotPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:gravity="right"
+            android:textSize="15dp"
+            android:textColor="#F45959"
+            />
+    </LinearLayout>
         <Button
             android:id="@+id/btn_signin"
             android:layout_width="match_parent"
@@ -127,12 +142,37 @@
             android:background="@drawable/button_visible_background"
             android:layout_marginVertical="10dp"
             />
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEB3B"
+            android:id="@+id/loginWithFingerprint"
+            android:layout_marginBottom="12dp"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fingerprint"
+                android:background="#FFEB3B"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login With Fingerprint"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#4267B2"
             android:id="@+id/btn_signin_fb"
+            android:layout_marginBottom="12dp"
+
             >
             <ImageView
                 android:layout_width="50dp"
@@ -150,27 +190,6 @@
                 />
         </LinearLayout>
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/login_button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="__________or__________"
-            android:textColor="#999"
-            android:gravity="center"
-            android:textSize="18dp"
-            />
-
-<!--        <com.google.android.gms.common.SignInButton-->
-<!--            android:id="@+id/sign_in_button"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content" />-->
 
         <LinearLayout
             android:layout_width="match_parent"

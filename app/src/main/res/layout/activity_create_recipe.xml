@@ -7,26 +7,33 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".CreateRecipeActivity"
             android:layout_margin="24dp">
-            <TextView
-                android:id="@+id/txt_name_action"
+            <LinearLayout
+                android:id="@+id/layout_name_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Recipe"
-                android:textColor="@android:color/black"
-                android:textSize="24sp"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_name_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Recipe"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"/>
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/layout_header"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_name_action"
+                android:layout_below="@id/layout_name_activity"
                 android:gravity="center_vertical"
                 android:layout_marginTop="32dp">
                 <ImageView
@@ -80,210 +87,25 @@
                         android:hint="Write Down Recipe Desciption"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-            <!--Gallery
-            <androidx.cardview.widget.CardView
-                android:id="@+id/layout_gallery"
-                android:layout_marginTop="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_desc"
-                app:cardCornerRadius="5dp">
-                <LinearLayout
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Gallery"
-                            android:layout_marginBottom="16dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"/>
-                        <ImageView
-                            android:id="@+id/image_edit_gallery"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_edit"
-                            android:layout_alignParentEnd="true"/>
-                    </RelativeLayout>
-
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_add_gallery"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:listitem="@layout/item_add_gallery"/>
-                    <Button
-                        android:id="@+id/btn_add_gallery"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_gray_background"
-                        android:drawableLeft="@drawable/ic_plus"
-                        android:padding="16dp"
-                        android:hint="Upload Images or Open Camera"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>-->
-            <!--Ingredient-->
-            <androidx.cardview.widget.CardView
+            <include
                 android:id="@+id/layout_ingredients"
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/layout_desc"
-                app:cardCornerRadius="5dp">
-                <LinearLayout
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ingredients"
-                            android:layout_marginBottom="16dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"/>
-                        <ImageView
-                            android:id="@+id/image_edit_ingredients"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_edit"
-                            android:layout_alignParentEnd="true"/>
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rv_ingredients_create"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/image_edit_ingredients"/>
-                    </RelativeLayout>
-                    <Button
-                        android:id="@+id/btn_add_ingredients"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_gray_background"
-                        android:drawableLeft="@drawable/ic_plus"
-                        android:padding="16dp"
-                        android:hint="Add Ingredient"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <!--How to Cook-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/layout_howtocook"
-                android:layout_marginTop="16dp"
+                layout="@layout/layout_ingredients"/>
+            <include
+                android:id="@+id/layout_directions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/layout_ingredients"
-                app:cardCornerRadius="5dp">
-                <LinearLayout
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="How to Cook"
-                            android:layout_marginBottom="16dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"/>
-                        <ImageView
-                            android:id="@+id/image_edit_howtocoook"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_edit"
-                            android:layout_alignParentEnd="true"/>
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rv_directions_create"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/image_edit_howtocoook"/>
-                    </RelativeLayout>
-                    <Button
-                        android:id="@+id/btn_add_direction"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_gray_background"
-                        android:drawableLeft="@drawable/ic_plus"
-                        android:padding="16dp"
-                        android:hint="Add Directions"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <!--How to Cook-->
-            <androidx.cardview.widget.CardView
+                layout="@layout/layout_directions"/>
+            <include
                 android:id="@+id/layout_info"
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/layout_howtocook"
-                app:cardCornerRadius="5dp">
-                <LinearLayout
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Additional Info"
-                            android:layout_marginBottom="16dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"/>
-                        <ImageView
-                            android:id="@+id/image_edit_info"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_edit"
-                            android:layout_alignParentEnd="true"/>
-                        <TextView
-                            android:id="@+id/tv_info_time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/image_edit_info"/>
-                        <TextView
-                            android:id="@+id/tv_info_nutrition"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/tv_info_time"/>
-                        <TextView
-                            android:id="@+id/tv_info_tags"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/tv_info_nutrition"/>
-                    </RelativeLayout>
-
-                    <Button
-                        android:id="@+id/btn_add_info"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_gray_background"
-                        android:drawableLeft="@drawable/ic_plus"
-                        android:padding="16dp"
-                        android:hint="Add Info"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                android:layout_below="@id/layout_directions"
+                layout="@layout/layout_info"/>
             <!--Button-->
-            <ProgressBar
-                android:id="@+id/progress_bar"
-                android:layout_width="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_height="wrap_content"/>
 
             <Button
                 android:id="@+id/btn_post"

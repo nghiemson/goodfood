@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image_cover"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <LinearLayout
+            android:id="@+id/title_bar"
+            android:background="@android:color/white"
+            android:alpha="0.9"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/avatar_blank"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/txt_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0f0f0"
+                android:background="#f0f0f0"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:text="Profile Name"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_recipe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_below="@id/image_cover"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+        <TextView
+            android:id="@+id/txt_recipe_desc_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f0f0f0"
+            android:textColor="#f0f0f0"
+            android:text="Description Description Description Description"
+            android:layout_below="@id/txt_recipe_name"
+            android:layout_margin="16dp"/>
+        <TextView
+            android:id="@+id/txt_recipe_desc_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f0f0f0"
+            android:textColor="#f0f0f0"
+            android:text="Description Description Description"
+            android:layout_below="@id/txt_recipe_desc_1"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/txt_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/txt_recipe_desc_2"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="#f0f0f0"
+            android:background="#f0f0f0"
+            android:text="0 like"
+            android:layout_marginBottom="8dp"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

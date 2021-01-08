@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Profile"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+    </com.google.android.material.appbar.AppBarLayout>
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:src="@drawable/other_avatar"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="8dp"
+        android:layout_below="@id/app_bar_profile"
         android:id="@+id/iv_other_avatar"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ariana Barros"
         android:layout_toRightOf="@id/iv_other_avatar"
+        android:layout_below="@id/app_bar_profile"
         android:layout_marginTop="16dp"
         android:textSize="16sp"
         android:fontFamily="sans-serif-medium"
@@ -24,7 +40,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pancake Master"
         android:layout_below="@id/tv_other_name"
         android:layout_toRightOf="@id/iv_other_avatar"
         android:layout_marginLeft="16dp"
@@ -34,28 +49,46 @@
         android:id="@+id/tv_other_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="696 followers  |  45k likes"
         android:layout_below="@id/tv_other_address"
         android:layout_toEndOf="@id/iv_other_avatar"
         android:layout_marginTop="24dp"
         android:layout_marginLeft="16dp"/>
-    <Button
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/layout_func"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Follow"
-        android:textAllCaps="false"
-        android:textSize="19sp"
-        android:textColor="#ffffff"
-        android:layout_below="@id/iv_other_avatar"
-        android:background="@drawable/button_visible_background"
-        android:layout_margin="16dp"
-        android:id="@+id/btn_follow"
-        android:theme="@style/AppTheme"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/iv_other_avatar">
+        <Button
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:text="Follow"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_visible_background"
+            android:layout_margin="8dp"
+            android:id="@+id/btn_follow"
+            android:theme="@style/AppTheme"/>
+        <ImageButton
+            android:id="@+id/btn_chat"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_message"/>
+        <ImageButton
+            android:id="@+id/btn_call"
+            android:background="@drawable/ic_phone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
-        android:layout_below="@id/btn_follow"
+        android:layout_below="@id/layout_func"
         android:layout_margin="8dp"
         android:id="@+id/line"/>
     <androidx.viewpager.widget.ViewPager

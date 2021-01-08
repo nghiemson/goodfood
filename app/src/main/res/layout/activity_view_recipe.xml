@@ -37,12 +37,11 @@
             app:expandedTitleMarginEnd="64dp"
             android:fitsSystemWindows="true"
             android:minHeight="?attr/actionBarSize"
-            app:title="Hello, title!">
+            app:title="Loading...">
             <ImageView
                 android:id="@+id/image_cover_collapse"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/food1"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 android:contentDescription="Image Cover" />
@@ -52,10 +51,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/recipe_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="parallax"
+                app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
