@@ -11,4 +11,4 @@
 
 [![Screenshot-20200904-161652909-1.jpg](https://i.postimg.cc/Ls4RzGCP/Screenshot-20200904-161652909-1.jpg)](https://postimg.cc/ZWQ1mshY)
 
-[![Screenshot-20200904-161713837-1.jpg](https://i.postimg.cc/5ttdHLyq/Screenshot-20200904-161713837-1.jpg)](https://postimg.cc/TKBHFyrp)
+
