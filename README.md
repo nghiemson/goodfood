@@ -1,5 +1,5 @@
 # GoodFood
-[![Screenshot-20210109-105224981-1.jpg](https://i.postimg.cc/0Q8v0FVm/Screenshot-20210109-105224981-1.jpg)](https://postimg.cc/yJr2VQ4Y)
+[![Screenshot-20210109-230149921-1.jpg](https://i.postimg.cc/52BKx0m5/Screenshot-20210109-230149921-1.jpg)](https://postimg.cc/18zrBy24)
 
 [![Screenshot-20200904-161233441-1.jpg](https://i.postimg.cc/mZ0RrBqX/Screenshot-20200904-161233441-1.jpg)](https://postimg.cc/BtcRY9JH)
 
