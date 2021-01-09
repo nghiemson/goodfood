@@ -144,8 +144,6 @@ public class SignInFragment extends Fragment {
         v.findViewById(R.id.btn_signin).setOnClickListener(loginOncLickListener);
         signUp = v.findViewById(R.id.idSignUp);
         dialog = new ProgressDialog(getContext());
-        buttonSignInFB = v.findViewById(R.id.btn_signin_fb);
-        buttonSignInGoogle = v.findViewById(R.id.btn_signin_google);
         passwordEditText = v.findViewById(R.id.txtPass);
         usernameEditText = v.findViewById(R.id.txtEmailOrUsername);
         forgotPass = v.findViewById(R.id.tvForgotPass);
@@ -173,12 +171,6 @@ public class SignInFragment extends Fragment {
             loginWithFingerprint();
         });
 
-        buttonSignInFB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginManager.getInstance().logInWithReadPermissions(getActivity(), Arrays.asList("public_profile", "email", "phone_number"));
-            }
-        });
 
 
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -407,21 +399,6 @@ public class SignInFragment extends Fragment {
                     }
                 });
     }
-
-    /*private void createRequest() {
-        GoogleSignInOptions gso =  new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .requestProfile()
-                .build();
-
-        googleSignInClient = GoogleSignIn.getClient(getContext(),gso);
-    }
-
-    private void signInGoogle() {
-        Intent signInIntent = googleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent,RC_SIGN_IN);
-    }*/
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override

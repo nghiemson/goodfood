@@ -166,54 +166,6 @@
                 android:layout_marginRight="20dp"
                 />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4267B2"
-            android:id="@+id/btn_signin_fb"
-            android:layout_marginBottom="12dp"
-
-            >
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/facebook_logo"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Login With Facebook"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="#FFF"
-                android:layout_marginRight="20dp"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#E2E2E2"
-            android:id="@+id/btn_signin_google"
-            >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/google_logo"
-                android:background="#E2E2E2"
-                android:layout_margin="10dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Login With Google"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="#000"
-                android:layout_marginRight="20dp"
-                />
-        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
